@@ -48,13 +48,13 @@ cClient.on('ready',()=>{
     if(resp2!=-1&&message.author.bot==false){
       message.channel.sendMessage('-nis');
       var explanation=message.content.replace(/be/i,'**$&**');
-      message.channel.sendMessage('Get it? "'+explanation+'" and "-**nis**" spell **benis**.');
+      message.channel.sendMessage('-nis ("'+explanation+'"'));
     }
 
     // Respond to @mentions.
     var resp=message.content.search('<@259465135066841089>');
     if(resp!=-1&&message.author.bot==false){
-      var comeback=message.content.replace(/<@259465135066841089>/,'<@'+message.author.id+'>')
+      var comeback=message.content.replace(/<@259465135066841089>/,'<@'+message.author.id+'>');
       message.channel.sendMessage(comeback);
     }
   });
