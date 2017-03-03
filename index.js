@@ -45,7 +45,7 @@ cClient.on('ready',()=>{
     // Run the "Benis" gag.
     var lowtxt=message.content.toLowerCase();
     var resp2=lowtxt.search(' be ');
-    if(resp2!=-1&&message.author.bot==false){
+    if(resp2!=-1&&message.author.bot==false&&message.channel.id!='213096561981259776'){
       var explanation=message.content.replace(/be/i,'**$&**');
       message.channel.sendMessage('-nis ("'+explanation+'")');
     }
