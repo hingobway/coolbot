@@ -1,6 +1,7 @@
 # coolbot
 A Discord Bot that's a bit useless.
-Written in [node.js](https://nodejs.org) using the [discord.js-commando](https://www.npmjs.com/package/discord.js-commando) API.
+Written in [node.js](https://nodejs.org) using the [discord.js-commando](https://www.npmjs.com/package/discord.js-commando) framework.
+
 [Link to discord.js wiki](https://discord.js.org/#/docs/main/stable/general/welcome)
 
 > **Warnings**
