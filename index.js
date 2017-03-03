@@ -1,3 +1,4 @@
+use strict;
 // Add Discord.js Packages.
 var Discord=require('discord.js');
 var commando=require('discord.js-commando');
