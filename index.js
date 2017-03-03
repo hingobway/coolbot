@@ -26,6 +26,7 @@ cClient.on('ready',()=>{
   // Add bot user settings.
   cClient.user.setGame('Club Penguin');
 
+  // \/ Lots of experimental code not currently running \/
   //hook.sendTTSMessage('I\'');
   //guild.channels.get('213096561981259776').sendMessage('AAAAA');
   /*guild.members.get('259465135066841089');
@@ -38,6 +39,7 @@ cClient.on('ready',()=>{
   general.fetchMessage(tmessage)
   .then(message=>message.delete())
   .catch(console.error);*/
+
   // Check for incoming messages.
   cClient.on('message', (message)=>{
     // Run the "Benis" gag.
@@ -58,7 +60,5 @@ cClient.on('ready',()=>{
   });
 });
 
-/*https://ptb.discordapp.com/api/webhooks/287051082067083264/lIoCtVwd-kJLQ8YA_LGvZvEmwh7ciLmGz3aiJhgQSdjVFOaYPzsksULckt_UagAOyWOi*/
-
 // Register as the correct bot.
-cClient.login('MjU5NDY1MTM1MDY2ODQxMDg5.CzYNWQ.JCdZnExok87goHDEswhOedBqRgY');
+cClient.login('INSERT TOKEN HERE');
