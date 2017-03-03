@@ -61,4 +61,4 @@ cClient.on('ready',()=>{
 });
 
 // Register as the correct bot.
-cClient.login('INSERT TOKEN HERE');
+cClient.login('TOKEN');
