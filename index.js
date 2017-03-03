@@ -48,7 +48,7 @@ cClient.on('ready',()=>{
     if(resp2!=-1&&message.author.bot==false){
       message.channel.sendMessage('-nis');
       var explanation=message.content.replace(/be/i,'**$&**');
-      message.channel.sendMessage('-nis ("'+explanation+'"'));
+      message.channel.sendMessage('-nis ("'+explanation+'")');
     }
 
     // Respond to @mentions.
