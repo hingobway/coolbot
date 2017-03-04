@@ -16,7 +16,7 @@ class announce extends disc.Command {
     if(uind!=undefined){
       var general=message.guild.channels.find('name','general');
       general.sendMessage('Hey, @everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
-
+      general.pin();
     }else{
       message.channel.sendMessage('Only @admins can use `announce`');
     }
