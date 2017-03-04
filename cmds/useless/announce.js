@@ -1,5 +1,4 @@
 var disc=require('discord.js-commando');
-var cClient=new disc();
 
 class announce extends disc.Command {
   constructor(client){
