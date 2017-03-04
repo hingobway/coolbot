@@ -1,6 +1,4 @@
 var disc=require('discord.js-commando');
-var discord=require('discord.js');
-var cClient=new discord.Client();
 
 class announce extends disc.Command {
   constructor(client){
@@ -17,10 +15,15 @@ class announce extends disc.Command {
     var uind=members.get(message.author.id);
     if(uind!=undefined){
       var general=message.guild.channels.find('name','general');
-      general.sendMessage('Hey, @everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
-      var guild =cClient.guilds.get('213096561981259776');
-      var msgid=guild.members.get('259465135066841089').lastMessageID;
-      general.fetchMessage(msgid).pin();
+      //general.sendMessage('Hey, @ everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
+      var msgid=general.lastMessageID;
+      console.log(msgid);
+      general.fetchMessage(msgid)
+      .then(message=>{
+        console.log(message);
+        message.pin();
+      })
+      .catch(console.error);
 
     }else{
       message.channel.sendMessage('Only @admins can use `announce`');
