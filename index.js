@@ -52,7 +52,7 @@ cClient.on('ready',()=>{
 
     // Respond to @mentions.
     var resp=message.content.search('<@259465135066841089>');
-    if(resp!=-1&&message.author.bot==false){
+    if(resp>0&&message.author.bot==false){
       var comeback=message.content.replace(/<@259465135066841089>/,'<@'+message.author.id+'>');
       message.channel.sendMessage(comeback);
     }
