@@ -16,13 +16,14 @@ class announce extends disc.Command {
     if(uind!=undefined){
       var general=message.guild.channels.find('name','general');
       general.sendMessage('Hey, @everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
-      var msgid=general.lastMessageID;
-      general.fetchMessage(msgid)
-      .then(message=>{
-        message.pin();
-      })
-      .catch(console.error);
-
+      setTimeout(function(){
+        var msgid=general.lastMessageID;
+        general.fetchMessage(msgid)
+        .then(message=>{
+          message.pin();
+        })
+        .catch(console.error);
+      }, 200);
     }else{
       message.channel.sendMessage('Only @admins can use `announce`');
     }
