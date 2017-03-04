@@ -15,12 +15,10 @@ class announce extends disc.Command {
     var uind=members.get(message.author.id);
     if(uind!=undefined){
       var general=message.guild.channels.find('name','general');
-      //general.sendMessage('Hey, @ everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
+      general.sendMessage('Hey, @everyone! <@'+message.author.id+'> has an announcement to make. They say the following:\n\n**'+args+'**\n\nThank you for your attention.');
       var msgid=general.lastMessageID;
-      console.log(msgid);
       general.fetchMessage(msgid)
       .then(message=>{
-        console.log(message);
         message.pin();
       })
       .catch(console.error);
