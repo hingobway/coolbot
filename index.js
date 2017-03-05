@@ -7,7 +7,7 @@ var cClient=new commando.Client({
   commandPrefix: ';',
   owner: '214430759870660612'
 });
-var hook = new Discord.WebhookClient('287051082067083264','lIoCtVwd-kJLQ8YA_LGvZvEmwh7ciLmGz3aiJhgQSdjVFOaYPzsksULckt_UagAOyWOi');
+
 
 
 cClient.registry.registerDefaults(); // Register default commands,
