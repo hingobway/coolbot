@@ -27,17 +27,6 @@ cClient.on('ready',()=>{
   cClient.user.setGame('Club Penguin');
 
   // \/ Lots of experimental code not currently running \/
-  hook.sendTTSMessage('I\'ll love who i want');
-  setTimeout(function(){
-    var cguild=cClient.guilds.get(hook.guildID);
-    var general=cguild.channels.find('name','general');
-    var msgid=general.lastMessageID;
-    general.fetchMessage(msgid)
-    .then(message=>{
-      message.delete();
-    })
-    .catch(console.error);
-  }, 200);
   //guild.channels.get('213096561981259776').sendMessage('AAAAA');
   /*guild.members.get('259465135066841089');
   var mess=me.lastMessageID();
