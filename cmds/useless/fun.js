@@ -1,4 +1,4 @@
-var disc=require('dicsord.js-commando');
+var disc=require('discord.js-commando');
 
 class fun extends disc.Command{
   constructor(client){
