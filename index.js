@@ -5,7 +5,8 @@ var commando=require('discord.js-commando');
 // Initialize Discord.js packages, and include bot options.
 var cClient=new commando.Client({
   commandPrefix: ';',
-  owner: '214430759870660612'
+  owner: '214430759870660612',
+  unknownCommandResponse: false
 });
 
 
