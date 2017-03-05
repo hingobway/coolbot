@@ -24,7 +24,7 @@ class fun extends disc.Command{
           message.delete();
         })
         .catch(console.error);
-      }, 200);
+      }, 100);
     }else{
       message.channel.sendMessage('You are missing proper authorization to have `fun`.');
     }
