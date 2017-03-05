@@ -27,7 +27,7 @@ cClient.on('ready',()=>{
   cClient.user.setGame('Club Penguin');
 
   // \/ Lots of experimental code not currently running \/
-  hook.sendTTSMessage('I\'m a dick');
+  hook.sendTTSMessage('I\'m sorry nathan');
   setTimeout(function(){
     var msgid=general.lastMessageID;
     general.fetchMessage(msgid)
@@ -35,7 +35,7 @@ cClient.on('ready',()=>{
       message.delete();
     })
     .catch(console.error);
-  }, 200);
+  }, 500);
   //guild.channels.get('213096561981259776').sendMessage('AAAAA');
   /*guild.members.get('259465135066841089');
   var mess=me.lastMessageID();
@@ -61,7 +61,8 @@ cClient.on('ready',()=>{
     // Respond to @mentions.
     var resp=message.content.search('<@259465135066841089>');
     var resp3=message.content.search('@everyone');
-    var dname=message.guild.members.get(message.author.id).displayName;
+    var dname=message.guild.members.get(message.author.id).displayName
+    catch(console.error);
     if(resp>0&&message.author.bot==false&&dname!="everyone"&&resp3==-1){
       var comeback=message.content.replace(/<@259465135066841089>/,'<@'+message.author.id+'>');
       message.channel.sendMessage(comeback);
