@@ -1,12 +1,14 @@
 var disc=require('discord.js-commando');
+var discord=require('discord.js');
+var hook = new discord.WebhookClient('287051082067083264','lIoCtVwd-kJLQ8YA_LGvZvEmwh7ciLmGz3aiJhgQSdjVFOaYPzsksULckt_UagAOyWOi');
 
 class fun extends disc.Command{
   constructor(client){
     super(client, {
       name: 'fun',
+      group: 'dead',
       memberName: 'fun',
-      description: 'fun',
-      group: 'dead'
+      description: 'this is fun'
     });
   }
 
