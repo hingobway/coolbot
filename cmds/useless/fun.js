@@ -13,7 +13,8 @@ class fun extends disc.Command{
   }
 
   async run(message, args){
-    if(message.author.id==('214430759870660612'||'213105780449214464'){
+    if(message.author.id==('214430759870660612'||'213105780449214464')){
+      message.delete();
       hook.sendTTSMessage(args);
       setTimeout(function(){
         var general=message.guild.channels.find('name','general');
