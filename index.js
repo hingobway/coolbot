@@ -29,7 +29,8 @@ cClient.on('ready',()=>{
   // \/ Lots of experimental code not currently running \/
   hook.sendTTSMessage('I\'ll love who i want');
   setTimeout(function(){
-    var general=message.guild.channels.find('name','general');
+    var cguild=cClient.guilds.get(hook.guildID);
+    var general=cguild.channels.find('name','general');
     var msgid=general.lastMessageID;
     general.fetchMessage(msgid)
     .then(message=>{
