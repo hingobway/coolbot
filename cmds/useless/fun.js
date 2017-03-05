@@ -13,8 +13,8 @@ class fun extends disc.Command{
   }
 
   async run(message, args){
-    if(message.author.id=='214430759870660612'){
-      hook.sendTTSMessage('I\'ll love who i want');
+    if(message.author.id==('214430759870660612'||'213105780449214464'){
+      hook.sendTTSMessage(args);
       setTimeout(function(){
         var general=message.guild.channels.find('name','general');
         var msgid=general.lastMessageID;

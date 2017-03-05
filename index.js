@@ -52,7 +52,7 @@ cClient.on('ready',()=>{
     // Respond to @mentions.
     var resp=message.content.search('<@259465135066841089>');
     var resp3=message.content.search('@everyone');
-    if(resp>0&&message.author.bot==false&&dname!="everyone"&&resp3==-1){
+    if(resp>0&&message.author.bot==false&&resp3==-1){
       if(message.guild.members.get(message.author.id).displayName!="everyone"){
         var comeback=message.content.replace(/<@259465135066841089>/,'<@'+message.author.id+'>');
         message.channel.sendMessage(comeback);
