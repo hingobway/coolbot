@@ -1,6 +1,6 @@
 var disc=require('discord.js-commando');
 var discord=require('discord.js');
-var hook = new discord.WebhookClient('287051082067083264','lIoCtVwd-kJLQ8YA_LGvZvEmwh7ciLmGz3aiJhgQSdjVFOaYPzsksULckt_UagAOyWOi');
+
 
 class fun extends disc.Command{
   constructor(client){
@@ -13,7 +13,7 @@ class fun extends disc.Command{
   }
 
   async run(message, args){
-    if(message.author.id==('214430759870660612'||'213105780449214464')){
+    if(message.author.id=='214430759870660612'||message.author.id=='213105780449214464'){
       message.delete();
       hook.sendTTSMessage(args);
       setTimeout(function(){
@@ -24,7 +24,7 @@ class fun extends disc.Command{
           message.delete();
         })
         .catch(console.error);
-      }, 100);
+      }, 200);
     }else{
       message.channel.sendMessage('You are missing proper authorization to have `fun`.');
     }
@@ -32,3 +32,5 @@ class fun extends disc.Command{
 }
 
 module.exports=fun;
+
+
