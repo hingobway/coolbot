@@ -29,3 +29,5 @@ class fun extends disc.Command{
     }
   }
 }
+
+module.exports=fun;
