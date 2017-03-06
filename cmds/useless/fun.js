@@ -8,7 +8,7 @@ class fun extends disc.Command{
       name: 'fun',
       group: 'dead',
       memberName: 'fun',
-      description: 'this is fun'
+      description: 'this is fun. try the new \';fun /u\'.'
     });
   }
 
@@ -19,8 +19,22 @@ class fun extends disc.Command{
     ]
     if(allowances.indexOf(message.author.id)!=-1){
       if(args!=''){
+        var resp=args.search('/u');
         message.delete();
-        hook.sendTTSMessage(args);
+        if(resp==0){
+          var msg1=args.replace(/\/u/,'');
+          var msg=msg.replace(/(.)/gi,'$& ');
+          var msg=msg.replace(/\//g,'slash');
+          var msg=msg.replace(/\./g,'dot');
+          var msg=msg.replace(/:/g,'colon');
+          var msg=msg.replace(/\?/g,'question mark');
+          var msg=msg.replace(/&/g,'ampersand');
+          var msg=msg.replace(/=/g,'equals sign');
+          var msg=msg.replace(/#/g,'octothorpe');
+          hook.sendTTSMessage(msg);
+        }else{
+          hook.sendTTSMessage(args);
+        }
         setTimeout(function(){
           var general=message.guild.channels.find('name','general');
           var msgid=general.lastMessageID;
