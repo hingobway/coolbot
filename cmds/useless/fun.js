@@ -22,7 +22,7 @@ class fun extends disc.Command{
         var resp=args.search('/u');
         message.delete();
         if(resp==0){
-          var msg1=args.replace(/\/u/,'');
+          var msg=args.replace(/\/u/,'');
           var msg=msg.replace(/(.)/gi,'$& ');
           var msg=msg.replace(/\//g,'slash');
           var msg=msg.replace(/\./g,'dot');
