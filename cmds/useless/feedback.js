@@ -1,5 +1,6 @@
 var disc=require('discord.js-commando');
-var custio=require('node-customerio');
+var http=require('http');
+var fs=require('fs');
 
 class feedback extends disc.Command{
   constructor(client){
@@ -13,24 +14,19 @@ class feedback extends disc.Command{
 
   async run(message, args){
     if(args!=''){
-      custio.init('f9c5e7cd1d2f112057a5','2c756998c4f76acafbde');
-      var d=new Date();
-      custio.identify({
-        id:message.author.id,
-        email: 'me@hingobway.com',
-        created_at: d.getTime(),
-        user: message.author.username
-      }).catch(err=>{
-        message.reply('Sorry, there was a problem with your message.');
-        console.log(err);
-      });
-      custio.track(message.author.id,'discfeedback',{
-        umsg:args
-      })
-      .done(message.channel.sendMessage('Feedback sent.'), function(err){
-        message.reply('Sorry, there was a problem with your message.');
-        console.log(err);
-      });
+      if(args.search(/\*\*\*/)==-1&&args.search(':::')==-1){
+        var insertion=args+'***'+message.author.username+':::';
+        fs.appendFile('cmds/useless/feedback.txt',insertion,{encoding:'utf8'},function(err){
+          if(err){
+            message.reply('Sorry, an error occurred. (<@214430759870660612> please check this out.)');
+            console.log(err);
+          }else{
+            message.channel.sendMessage('Feedback successful.');
+          }
+        });
+      }else{
+        message.reply('Sorry, feedback can\'t include "***" or ":::".');
+      }
     }else{
       message.reply('You forgot your feedback.');
     }
