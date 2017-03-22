@@ -2,7 +2,7 @@
 A Discord Bot that's a bit useless.
 Written in [node.js](https://nodejs.org) using the [discord.js-commando](https://www.npmjs.com/package/discord.js-commando) framework.
 
-> [**Please visit the CoolBot wiki for answers to most of your questions!**](coolbot/wiki)
+> [**Please visit the CoolBot wiki for answers to most of your questions!**](https://github.com/hingobway/coolbot/wiki)
 
 [Link to discord.js wiki](https://discord.js.org/#/docs/main/stable/general/welcome)
 
